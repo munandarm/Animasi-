@@ -1,0 +1,51 @@
+<doctype html>
+<html>
+
+<head>
+    <title>Animasi PHP</title>
+    <style>
+
+        /* CSS untuk animasi */
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: move 2s infinite;
+        }
+
+        /* Keyframes untuk animasi */
+@Keyframes move {
+            0% {
+                left: 0;
+            }
+            50% {
+                left: 200px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animasi PHP PEMPROGRAMAN DASAR</h1>
+
+    <div class="box"></div>
+
+    <script>
+
+        // JavaScript untuk mengubah warna latar belakang setiap 3 detik
+
+        setInterval(function() {
+
+            var box = document.querySelector('.box');
+            var randomColor = '#' +
+            Math.floor(Math.random()*16777215).toString(16);
+            box.style.backgroundColor = randomColor;
+
+        }, 3000);
+    </script>
+</body>
+</html>
